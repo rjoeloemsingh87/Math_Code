@@ -34,3 +34,11 @@ def mode(numbers):
     max_count = max(counter.values())
     mode = [k for k, v in counter.items() if v == max_count]
     return mode[0] if mode else None
+
+#Variance - variance(numbers) - numbers = list of values
+def variance(numbers):
+    n = len(numbers)
+    mean = sum(numbers) / n
+    deviations = [(x - mean) ** 2 for x in numbers]
+    variance = sum(deviations) / (n - 1)
+    return variance
