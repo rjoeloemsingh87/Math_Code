@@ -26,3 +26,11 @@ def median(numbers):
         median = sorted_numbers[n//2]
     return median
 
+#Mode - mode(numbers) - numbers = list of values
+from collections import Counter
+
+def mode(numbers):
+    counter = Counter(numbers)
+    max_count = max(counter.values())
+    mode = [k for k, v in counter.items() if v == max_count]
+    return mode[0] if mode else None
